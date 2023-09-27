@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bs task5</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.19.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        td{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="container-fluid ">
+            <form action="https//google.com" class="form needs-validation" novalidate>
+                <table  style="background-color: aliceblue;">
+                    <tr>
+                        <td>First Name</td>
+                        <td>
+                            <div class="input-group">
+                                <span class="input-group-text" ><i class="fa-solid fa-user"></i></span>
+                                <input type="text" class="form-control" aria-describedby="inputGroupPrepend" placeholder="First Name"  required>
+                                <div class="invalid-feedback">
+                                  Please supply your first username.
+                                </div>
+                              </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Lastname</td>
+                        <td>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text" ><i class="fa-solid fa-user"></i></span>
+                                <input type="text" class="form-control"  placeholder="Last Name" required>
+                                <div class="invalid-feedback">
+                                  Please supply your last username.
+                                </div>
+                              </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                                <input type="text" class="form-control"  placeholder="Email" required>
+                                <div class="invalid-feedback">
+                                    Please supply your email.
+                                </div>
+                              </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text" ><i class="fa-solid fa-phone"></i></span>
+                                <input type="text" class="form-control" placeholder="#2934023872" required>
+                                <div class="invalid-feedback">
+                                    Please supply your phone number.
+                                </div>
+                              </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text"><i class="fa-solid fa-home"></i></span>
+                                <input type="text" class="form-control" placeholder="Address" required>
+                                <div class="invalid-feedback">
+                                    Please supply your address.
+                                </div>
+                              </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>City</td>
+                        <td>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text" ><i class="fa-solid fa-home"></i></span>
+                                <input type="text" class="form-control" placeholder="City" required>
+                                <div class="invalid-feedback">
+                                    Please supply your city name.
+                                </div>
+                              </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>State</td>
+                        <td>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text"><i class="fa-solid fa-list-ul"></i></span>
+                                <select class="form-select">
+                                    <option selected disabled value="">Choose...</option>
+                                    <option>...</option>
+                                  </select>
+                                  <div class="invalid-feedback">
+                                    Please select a valid state.
+                                  </div>
+                              </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Do you have a host?</td>
+                        <td>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" name="radio-stacked">
+                                <label class="form-check-label">Yes</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" name="radio-stacked">
+                                <label class="form-check-label">No</label>
+
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Project Description</td>
+                        <td>
+                            <div class="mb-3 input-group-text">
+                                <span class="input-group-text"><i class="fa-solid fa-pen"></i></span>
+                                <textarea class="form-control" id="validationTextarea" placeholder="Description"></textarea>
+                        </td>
+                    </tr>
+                   
+                </table>
+                <button class="btn btn-danger" type = "submit">Save</button>
+            </form>
+    
+        </div>
+
+    </center>
+    <script>
+        (() => {
+  'use strict'
+  const forms = document.querySelectorAll('.needs-validation')
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+    </script>
+    
+</body>
+</html>

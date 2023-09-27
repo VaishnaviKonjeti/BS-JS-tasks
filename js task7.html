@@ -1,0 +1,39 @@
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation: mymove 4s infinite;
+  animation-play-state: paused;
+}
+
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 400px;}
+}
+
+</style>
+</head>
+<body>
+
+<script>
+function myStartFunction() {
+  document.getElementById("train").style.animationPlayState = "running";
+}
+
+function myStopFunction() {
+  document.getElementById("train").style.animationPlayState = "paused";
+}
+</script>
+
+<div id="train"><img id="animated-train" src="https://js.cx/clipart/train.gif"></div>
+
+<br><br><br>
+<h1>Click the following buttons to handle animation</h1>
+<button onclick="myStartFunction()">Start</button>
+<button onclick="myStopFunction()">Stop</button>
+
+</body>
+</html>

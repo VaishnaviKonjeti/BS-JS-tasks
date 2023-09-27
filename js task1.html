@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>js task1</title>
+    <script>
+        function reverseNumber() {
+            let x = document.getElementById("numberInput").value;
+
+            let numStr = x.toString();
+
+            let reversedStr = numStr.split('').reverse().join('');
+
+            let reversedNum = parseInt(reversedStr);
+
+            document.getElementById("result").innerHTML = "Expected Output : " + reversedNum;
+        }
+    </script>
+</head>
+<body>
+    <h1>Number Reversal</h1>
+    <p>Example x:</p>
+    <input type="text" id="numberInput">
+    <button onclick="reverseNumber()">Reverse</button>
+    <p id="result"></p>
+</body>
+</html>
